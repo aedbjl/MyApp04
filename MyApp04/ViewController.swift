@@ -10,6 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("prepare")
+        if segue.identifier == "sg2page2"{
+            let dvc:ViewController1 = segue.destination as! ViewController1
+            dvc.arg = "Brad"
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

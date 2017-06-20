@@ -9,10 +9,24 @@
 import UIKit
 
 class ViewController1: UIViewController {
-
+    
+    
+    var arg:String?
+    
+//    @IBAction func unwind(for segue: UIStoryboardSegue){
+//        print("back")
+//    }
+    @IBAction override func unwind(for unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
+        print("back")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if let strarg = arg {
+            print("arg = \(strarg)")
+        }else {
+            print("xxxxxxxxx")
+        }
         // Do any additional setup after loading the view.
     }
 
